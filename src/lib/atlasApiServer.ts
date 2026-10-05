@@ -1,9 +1,9 @@
 import { MONGODB_CONFIG } from "./mongodb";
 
 const MONGODB_URI =
-  (typeof process !== "undefined" && process?.env?.MONGODB_URI) || MONGODB_CONFIG.uri;
+  (typeof process !== "undefined" && process?.env?.["MONGODB_URI"]) || MONGODB_CONFIG.uri;
 const DB_NAME =
-  (typeof process !== "undefined" && process?.env?.MONGODB_DB_NAME) || MONGODB_CONFIG.dbName;
+  (typeof process !== "undefined" && process?.env?.["MONGODB_DB_NAME"]) || MONGODB_CONFIG.dbName;
 
 let cachedClient: any = null;
 let cachedDb: any = null;
@@ -224,7 +224,7 @@ export async function handleAtlasApiRequest(request: Request): Promise<Response 
         const col = db.collection("projects");
         if (request.method === "GET") {
           const docs = await col.find({}).sort({ id: -1 }).toArray();
-          const cleanDocs = docs.map(({ _id, ...rest }) => rest);
+          const cleanDocs = docs.map(({ _id, ...rest }: any) => rest);
           const projects = cleanDocs.length > 0 ? cleanDocs : SEED_PROJECTS;
           return jsonResponse({ success: true, projects });
         }
@@ -261,7 +261,7 @@ export async function handleAtlasApiRequest(request: Request): Promise<Response 
         const col = db.collection("team_members");
         if (request.method === "GET") {
           const docs = await col.find({}).sort({ id: -1 }).toArray();
-          const cleanDocs = docs.map(({ _id, ...rest }) => rest);
+          const cleanDocs = docs.map(({ _id, ...rest }: any) => rest);
           const team = cleanDocs.length > 0 ? cleanDocs : SEED_TEAM;
           return jsonResponse({ success: true, team });
         }
@@ -298,7 +298,7 @@ export async function handleAtlasApiRequest(request: Request): Promise<Response 
         const col = db.collection("blogs");
         if (request.method === "GET") {
           const docs = await col.find({}).sort({ id: -1 }).toArray();
-          const cleanDocs = docs.map(({ _id, ...rest }) => rest);
+          const cleanDocs = docs.map(({ _id, ...rest }: any) => rest);
           const blogs = cleanDocs.length > 0 ? cleanDocs : SEED_BLOGS;
           return jsonResponse({ success: true, blogs });
         }
@@ -335,7 +335,7 @@ export async function handleAtlasApiRequest(request: Request): Promise<Response 
         const col = db.collection("users");
         if (request.method === "GET") {
           const docs = await col.find({}).toArray();
-          const cleanDocs = docs.map(({ _id, ...rest }) => rest);
+          const cleanDocs = docs.map(({ _id, ...rest }: any) => rest);
           return jsonResponse({ success: true, users: cleanDocs });
         }
         if (request.method === "POST") {
@@ -397,7 +397,7 @@ export async function handleAtlasApiRequest(request: Request): Promise<Response 
         const col = db.collection("reviews");
         if (request.method === "GET") {
           const docs = await col.find({}).sort({ id: -1 }).toArray();
-          const cleanDocs = docs.map(({ _id, ...rest }) => rest);
+          const cleanDocs = docs.map(({ _id, ...rest }: any) => rest);
           return jsonResponse({ success: true, reviews: cleanDocs });
         }
         if (request.method === "POST") {
