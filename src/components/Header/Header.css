@@ -204,3 +204,24 @@
     display: block;
   }
 }
+
+@media (max-width: 640px) {
+  .header__inner {
+    height: 72px;
+    gap: 10px;
+  }
+
+  .header__logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header__name {
+    font-size: 17px;
+  }
+
+  .header__nav {
+    top: 72px;
+    padding: 20px 16px;
+  }
+}

@@ -42,6 +42,9 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* Ensure the header is permanently fixed to the viewport at all times */
@@ -85,6 +88,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -96,6 +100,16 @@ img {
 
 .section {
   padding: 96px 0;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
 }
 
 .eyebrow {

@@ -93,24 +93,28 @@
 
 @media (max-width: 1080px) {
   .robo-3d-mascot {
-    width: clamp(480px, 50vw, 600px);
-    height: clamp(520px, 70vh, 640px);
-    transform: translateY(44px);
+    width: clamp(400px, 48vw, 560px);
+    height: clamp(440px, 55vh, 600px);
+    transform: translateY(32px);
   }
 }
 
 @media (max-width: 768px) {
   .robo-3d-mascot {
-    width: 440px;
-    height: 480px;
-    transform: translateY(24px);
+    width: min(100%, 400px);
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    transform: translateY(20px);
   }
 }
 
 @media (max-width: 480px) {
   .robo-3d-mascot {
-    width: 340px;
-    height: 370px;
-    transform: translateY(16px);
+    width: min(100%, 300px);
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    transform: translateY(10px);
   }
 }

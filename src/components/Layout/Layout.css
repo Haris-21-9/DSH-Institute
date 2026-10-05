@@ -8,3 +8,9 @@
   flex: 1;
   padding-top: 88px;
 }
+
+@media (max-width: 640px) {
+  .layout__main {
+    padding-top: 72px;
+  }
+}
