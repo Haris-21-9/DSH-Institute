@@ -1,0 +1,29 @@
+============================================================
+                    MAIN PROJECT API LINKS & BROWSER URLS
+================================================================================
+1. PROJECTS API
+   - Browser URL: http://localhost:3000/api/atlas/projects
+   - Client File: src/lib/projectsClient.js
+   - Server Link: src/lib/viteMongoPlugin.js (Line 461)
+2. TEAM API
+   - Browser URL: http://localhost:3000/api/atlas/team
+   - Client File: src/lib/teamClient.js
+   - Server Link: src/lib/viteMongoPlugin.js (Line 522)
+3. BLOGS API
+   - Browser URL: http://localhost:3000/api/atlas/blogs
+   - Client File: src/lib/blogsClient.js
+   - Server Link: src/lib/viteMongoPlugin.js (Line 612)
+4. AUTHENTICATION & USERS API
+   - Browser URL: http://localhost:3000/api/atlas/users
+   - Client File: src/login-view/AuthContext.jsx
+   - Server Link: src/lib/viteMongoPlugin.js (Line 673)
+5. WEBSITE LIVE PROXY API
+   - Browser URL: http://localhost:3000/api/proxy?url=https://digitalskillshouse.pk
+   - Server Link: src/server.ts (Line 126)
+6. ASSET CORS PROXY API
+   - Browser URL: http://localhost:3000/api/asset-proxy?url=https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans
+   - Server Link: src/server.ts (Line 68)
+7. MONGODB ATLAS DATABASE
+   - Database: Colabify Cluster0
+   - Config File: src/lib/mongodb.ts
+================================================================================

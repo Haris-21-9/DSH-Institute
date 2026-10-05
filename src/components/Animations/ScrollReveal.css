@@ -1,0 +1,76 @@
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation Types */
+.scroll-reveal--fade-in {
+  transform: translateY(0);
+}
+
+.scroll-reveal--fade-in.is-visible {
+  opacity: 1;
+}
+
+.scroll-reveal--slide-up {
+  transform: translateY(40px);
+}
+
+.scroll-reveal--slide-up.is-visible {
+  transform: translateY(0);
+}
+
+.scroll-reveal--scale-in {
+  transform: scale(0.95);
+}
+
+.scroll-reveal--scale-in.is-visible {
+  transform: scale(1);
+}
+
+.scroll-reveal--slide-left {
+  transform: translateX(-30px);
+}
+
+.scroll-reveal--slide-left.is-visible {
+  transform: translateX(0);
+}
+
+.scroll-reveal--slide-right {
+  transform: translateX(30px);
+}
+
+.scroll-reveal--slide-right.is-visible {
+  transform: translateX(0);
+}
+
+/* Staggered Children */
+.scroll-reveal__child {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: var(--stagger-delay, 0ms);
+}
+
+.scroll-reveal.is-visible .scroll-reveal__child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal__child {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

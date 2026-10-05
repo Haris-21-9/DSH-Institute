@@ -1,0 +1,116 @@
+.robo-3d-mascot {
+  position: relative;
+  width: clamp(540px, 45vw, 690px);
+  height: clamp(540px, 45vw, 690px);
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 4;
+  transform: translateY(clamp(40px, 4.8vh, 52px));
+}
+
+.robo-3d-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 900px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Soft Ambient Shadow on Ground */
+.robo-3d-shadow {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72%;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 0.40) 0%,
+      rgba(0, 0, 0, 0.12) 50%,
+      transparent 75%);
+  filter: blur(10px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Robot Body Wrapper (Stationary Sitting) */
+.robo-3d-body-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Robot Head Wrapper (Rotates Around Exact Neck Joint Pivot) */
+.robo-3d-head-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  transform-origin: 50% 48.0%;
+  /* Exact mechanical neck joint pivot */
+  transform-style: preserve-3d;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.robo-3d-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Subtle CRT Screen Reflection Glow */
+.robo-3d-screen-glow {
+  position: absolute;
+  top: 21.1%;
+  left: 35.7%;
+  width: 29.7%;
+  height: 20.3%;
+  border-radius: 16px;
+  background: radial-gradient(ellipse at 40% 30%,
+      rgba(255, 255, 255, 0.16) 0%,
+      transparent 65%);
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  will-change: transform;
+}
+
+@media (max-width: 1080px) {
+  .robo-3d-mascot {
+    width: clamp(480px, 50vw, 600px);
+    height: clamp(520px, 70vh, 640px);
+    transform: translateY(44px);
+  }
+}
+
+@media (max-width: 768px) {
+  .robo-3d-mascot {
+    width: 440px;
+    height: 480px;
+    transform: translateY(24px);
+  }
+}
+
+@media (max-width: 480px) {
+  .robo-3d-mascot {
+    width: 340px;
+    height: 370px;
+    transform: translateY(16px);
+  }
+}

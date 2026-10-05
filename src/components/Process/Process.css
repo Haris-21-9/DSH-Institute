@@ -1,0 +1,146 @@
+.process {
+  background-color: var(--dark);
+  color: #fff;
+  padding: 110px 0;
+}
+
+.process__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.process__title {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  margin-left: -50px;
+}
+
+.process__text {
+  margin-top: 20px;
+  max-width: 440px;
+  color: var(--dark-muted);
+  margin-left: -50px;
+}
+
+.process__cta {
+  margin-top: 34px;
+  margin-left: -50px;
+}
+
+.process__media {
+  position: relative;
+  margin-top: 52px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-left: -50px;
+}
+
+.process__media img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  margin-left: -50px;
+}
+
+.process__play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 74px;
+  height: 74px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.process__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 60px;
+  position: relative;
+  margin-left: 50px;
+}
+
+.process__steps::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 10px;
+  bottom: 12px;
+  width: 1px;
+  background-color: var(--dark-line);
+}
+
+.process__step {
+  position: relative;
+}
+
+.process__no {
+  position: absolute;
+  left: -68px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--brand-orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.process__card {
+  border: 1px solid var(--dark-line);
+  border-radius: var(--radius-lg);
+  background-color: var(--dark-card);
+  padding: 32px;
+  margin-right: 50px;
+  margin-left: 50px
+}
+
+.process__icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: var(--brand-orange);
+  color: #fff;
+  font-size: 24px;
+}
+
+.process__cardTitle {
+  margin-top: 34px;
+  font-size: 22px;
+}
+
+.process__cardText {
+  margin-top: 12px;
+  color: var(--dark-muted);
+  font-size: 15.5px;
+}
+
+@media (max-width: 1080px) {
+  .process__inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .process__steps {
+    padding-left: 70px;
+  }
+
+  .process__steps::before {
+    left: 22px;
+  }
+
+  .process__no {
+    left: 0;
+  }
+}

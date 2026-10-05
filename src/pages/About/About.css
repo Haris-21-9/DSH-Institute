@@ -1,0 +1,32 @@
+.aboutValues {
+  padding: 20px 0 60px;
+}
+
+.aboutValues__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.aboutValues__card {
+  background-color: var(--surface-alt);
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.aboutValues__card h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.aboutValues__card p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+
+@media (max-width: 880px) {
+  .aboutValues__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,404 @@
+/* ==========================================================================
+   HomeTeam Section
+   Executive Team & Specialist Showcase for Colabify Home Page
+   ========================================================================== */
+
+.homeTeam {
+  position: relative;
+  padding: 104px 0 120px;
+  background-color: #fafbfc;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  overflow: hidden;
+}
+
+/* Ambient Radial Mesh & Warm Backdrop Glow */
+.homeTeam__ambient-glow {
+  position: absolute;
+  top: 12%;
+  right: 5%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(250, 113, 38, 0.08) 0%, transparent 68%);
+  filter: blur(64px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.homeTeam__ambient-glow-secondary {
+  position: absolute;
+  bottom: 8%;
+  left: 4%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section Header */
+.homeTeam__header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 56px;
+}
+
+.homeTeam__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(250, 113, 38, 0.08);
+  border: 1px solid rgba(250, 113, 38, 0.22);
+  border-radius: 9999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ea580c;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.homeTeam__tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ea580c;
+  box-shadow: 0 0 8px #ea580c;
+  animation: homeTeamDotPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes homeTeamDotPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+}
+
+.homeTeam__tag-icon {
+  color: #ea580c;
+}
+
+.homeTeam__header-row {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 48px;
+  align-items: flex-end;
+}
+
+.homeTeam__title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.1rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  color: #0f172a;
+  margin: 0;
+}
+
+.homeTeam__title-gradient {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homeTeam__subheading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* 3 Service Specialist Cards Grid */
+.homeTeam__grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 56px;
+  align-items: stretch;
+}
+
+.homeTeam__card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.homeTeam__service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ea580c;
+  margin-bottom: 4px;
+}
+
+.homeTeam__service-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ea580c;
+}
+
+.homeTeam__card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 22px;
+  padding: 16px;
+  box-shadow: 0 4px 18px -3px rgba(15, 23, 42, 0.05);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.homeTeam__card-link:hover .homeTeam__card {
+  transform: translateY(-6px);
+  border-color: rgba(250, 113, 38, 0.38);
+  box-shadow: 
+    0 22px 50px -12px rgba(15, 23, 42, 0.1),
+    0 0 0 1px rgba(250, 113, 38, 0.14);
+}
+
+/* Top Image Frame */
+.homeTeam__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.homeTeam__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.65s ease;
+}
+
+.homeTeam__card-link:hover .homeTeam__img {
+  transform: scale(1.05);
+  filter: brightness(1.02);
+}
+
+.homeTeam__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.25) 0%,
+    rgba(15, 23, 42, 0.02) 40%,
+    rgba(15, 23, 42, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.homeTeam__category-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  background: rgba(15, 23, 42, 0.76);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  z-index: 3;
+  letter-spacing: 0.02em;
+}
+
+/* Content Under Image */
+.homeTeam__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 18px 6px 6px;
+}
+
+.homeTeam__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.homeTeam__name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.homeTeam__card-link:hover .homeTeam__name {
+  color: #ea580c;
+}
+
+.homeTeam__role {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #ea580c;
+  letter-spacing: -0.01em;
+}
+
+.homeTeam__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(226, 232, 240, 0.85);
+  gap: 12px;
+}
+
+.homeTeam__skills-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.homeTeam__skills-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.homeTeam__skills {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #475569;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.homeTeam__arrow-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.homeTeam__profile-hint {
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.homeTeam__card-link:hover .homeTeam__profile-hint {
+  color: #ea580c;
+}
+
+.homeTeam__arrow-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.homeTeam__card-link:hover .homeTeam__arrow-circle {
+  background: #fa7126;
+  color: #ffffff;
+  transform: scale(1.1) translate(2px, -2px);
+  box-shadow: 0 4px 12px rgba(250, 113, 38, 0.4);
+}
+
+/* Bottom CTA Row */
+.homeTeam__action-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  flex-wrap: wrap;
+}
+
+.homeTeam__cta-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.homeTeam__action-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .homeTeam__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .homeTeam__header-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 980px) {
+  .homeTeam {
+    padding: 72px 0 92px;
+  }
+}
+
+@media (max-width: 640px) {
+  .homeTeam__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .homeTeam__title {
+    font-size: 1.95rem;
+  }
+
+  .homeTeam__action-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+}

@@ -1,0 +1,121 @@
+.testimonialCarousel {
+  padding: 60px 0 80px;
+  background-color: var(--surface-alt);
+  width: 1200px;
+  margin-left: 160px;
+}
+
+.testimonialCarousel .container {
+  width: 1200px;
+  height: 10px;
+}
+
+.testimonialCarousel__title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+.testimonialCarousel__track {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.testimonialCarousel__inner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: slideTestimonials 22s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+@keyframes slideTestimonials {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.testimonialCarousel__card {
+  background-color: var(--surface);
+  border-radius: 16px;
+  padding: 24px;
+  min-width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.testimonialCarousel__stars {
+  color: var(--brand-orange);
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+.testimonialCarousel__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.testimonialCarousel__role {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.testimonialCarousel__quote {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+.testimonialCarousel__nameTrack {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  margin: -20px auto 0;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 12px 0;
+  box-shadow: none;
+}
+
+.testimonialCarousel__nameInner {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  animation: slideNames 20s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+@keyframes slideNames {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.testimonialCarousel__nameItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.testimonialCarousel__nameItem:hover {
+  opacity: 1;
+}
