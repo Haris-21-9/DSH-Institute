@@ -2,6 +2,7 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { handleAtlasApiRequest } from "./lib/atlasApiServer";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -65,6 +66,12 @@ export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     const url = new URL(request.url);
     const localOrigin = url.origin;
+
+    // ─── MONGODB ATLAS API ENDPOINTS ───
+    if (url.pathname.startsWith("/api/atlas/")) {
+      const atlasResponse = await handleAtlasApiRequest(request);
+      if (atlasResponse) return atlasResponse;
+    }
 
     // ─── ASSET PROXY ENDPOINT (Bypasses CORS for Fonts, Stylesheets & Media) ───
     if (url.pathname === "/api/asset-proxy") {

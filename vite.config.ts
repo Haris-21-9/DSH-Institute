@@ -11,6 +11,11 @@ import { viteMongoPlugin } from "./src/lib/viteMongoPlugin.js";
 export default defineConfig({
   vite: {
     plugins: [viteMongoPlugin()],
+    resolve: {
+      alias: {
+        "punycode/": "punycode",
+      },
+    },
   },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
