@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 // @ts-expect-error - plain JSX component
 import Layout from "../components/Layout/Layout";
 // @ts-expect-error - plain JSX component
-import { AuthProvider } from "../admin/AuthContext";
+import { AuthProvider } from "@/admin/AuthContext.jsx";
 
 function NotFoundComponent() {
   return (
@@ -31,7 +31,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: any; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
