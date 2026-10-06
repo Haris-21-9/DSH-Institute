@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-expect-error - plain JSX page
-import AdminBlog from "../pages/adminpanel/blog";
+import AdminBlog from "../admin/blog";
 
 const title = "Manage Blog Articles — Admin Panel";
 const description = "Manage editorial articles, insights, and publications.";

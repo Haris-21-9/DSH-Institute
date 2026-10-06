@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-expect-error - plain JSX page
-import AdminTeam from "../pages/adminpanel/team";
+import AdminTeam from "../admin/team";
 
 const title = "Manage Team — Admin Panel";
 const description = "Manage engineering team members, roles, and skills.";

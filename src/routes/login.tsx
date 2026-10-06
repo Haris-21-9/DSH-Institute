@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 // @ts-expect-error - plain JSX component
-import LoginView from "../login-view/LoginView";
+import LoginView from "../admin/LoginView";
 
 const title = "Admin Login & Sign Up — Digital Skill House";
 const description = "Sign in or register for the Digital Skill House Administration Control Panel.";

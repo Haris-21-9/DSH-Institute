@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-expect-error - plain JSX page
-import AdminProjects from "../pages/adminpanel/projects";
+import AdminProjects from "../admin/projects";
 
 const title = "Manage Projects — Admin Panel";
 const description = "Manage live portfolio websites, categories, and API links.";

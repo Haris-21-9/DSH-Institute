@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-expect-error - plain JSX page
-import Admin from "../pages/adminpanel/admin";
+import Admin from "../admin/admin";
 
 const title = "Admin Dashboard — Colabify / Digital Skills House";
 const description =

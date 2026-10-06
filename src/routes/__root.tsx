@@ -14,7 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 // @ts-expect-error - plain JSX component
 import Layout from "../components/Layout/Layout";
 // @ts-expect-error - plain JSX component
-import { AuthProvider } from "../login-view/AuthContext";
+import { AuthProvider } from "../admin/AuthContext";
 
 function NotFoundComponent() {
   return (
